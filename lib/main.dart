@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_4/dropdownbutton.dart';
-
 import 'buttons.dart';
 
 void main() {
@@ -16,7 +15,7 @@ class MyApp extends StatelessWidget {
         title: "MyApp",
         theme: ThemeData(
             primarySwatch: Colors.purple,
-            textTheme: TextTheme(
+            textTheme: const TextTheme(
                 headline1: TextStyle(
                     color: Colors.purple, fontWeight: FontWeight.bold)),
             outlinedButtonTheme:
@@ -26,9 +25,9 @@ class MyApp extends StatelessWidget {
                     backgroundColor: MaterialStateProperty.all(Colors.blue)))),
         home: Scaffold(
           appBar: AppBar(
-            title: Text("Buttons"),
+            title: const Text("Buttons"),
           ),
-          body: DropDownButtonUsage(),
+          body: const BasicButtons(),
         ));
   }
 }
