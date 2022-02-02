@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_4/CardListTile.dart';
+import 'package:flutter_application_4/GridViewUsage.dart';
+import 'package:flutter_application_4/ListViewLayoutProblems.dart';
 import 'package:flutter_application_4/ListviewUsage.dart';
 import 'package:flutter_application_4/dropdownbutton.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
@@ -43,8 +45,7 @@ class MyApp extends StatelessWidget {
           textButtonTheme: TextButtonThemeData(
               style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(Colors.blue)))),
-      home: ListViewUsage(),
-      builder: EasyLoading.init(),
+      home: GridViewExample(),
     );
   }
 }
