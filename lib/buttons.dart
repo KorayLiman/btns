@@ -57,14 +57,7 @@ class BasicButtons extends StatelessWidget {
               onPressed: () {},
               icon: const Icon(Icons.account_balance_wallet_sharp),
               label: const Text("outlined with icon")),
-          PopupMenuButton(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(16)),
-              itemBuilder: (context) => [
-                    const PopupMenuItem(child: Text("First"), value: 1),
-                    const PopupMenuItem(child: Text("Second"), value: 2),
-                    const PopupMenuItem(child: Text("Third"), value: 3),
-                  ]),
+          PopUpButton(),
           CupertinoButton(
             child: const Text("Cupertino"),
             onPressed: () {},
@@ -73,11 +66,40 @@ class BasicButtons extends StatelessWidget {
           const BackButton(
             color: Colors.blue,
           ),
-          const CloseButton(
-            color: Colors.blue,
-          )
+          CloseBut()
         ],
       ),
+    );
+  }
+}
+
+class CloseBut extends StatelessWidget {
+  const CloseBut({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return CloseButton(
+      color: Colors.blue,
+    );
+  }
+}
+
+class PopUpButton extends StatelessWidget {
+  PopUpButton({
+    Key? key,
+  }) : super(key: key);
+
+  List<String> MyList = ["First", "Second", "Third"];
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton(
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      itemBuilder: (context) => MyList.map((String e) => PopupMenuItem(
+            child: Text(e),
+            value: e,
+          )).toList(),
     );
   }
 }

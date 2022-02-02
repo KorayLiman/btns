@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_4/CardListTile.dart';
 import 'package:flutter_application_4/dropdownbutton.dart';
 import 'buttons.dart';
 
@@ -23,11 +24,6 @@ class MyApp extends StatelessWidget {
             textButtonTheme: TextButtonThemeData(
                 style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.blue)))),
-        home: Scaffold(
-          appBar: AppBar(
-            title: const Text("Buttons"),
-          ),
-          body: const BasicButtons(),
-        ));
+        home: CardListTileUsage());
   }
 }
